@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A6FBF20C24A39344002A21A6 /* EventDetailLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FBF20B24A39344002A21A6 /* EventDetailLauncher.swift */; };
 		AC7B212524A28A660012D7A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7B212424A28A660012D7A7 /* AppDelegate.swift */; };
 		AC7B212724A28A660012D7A7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7B212624A28A660012D7A7 /* SceneDelegate.swift */; };
 		AC7B212924A28A660012D7A7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7B212824A28A660012D7A7 /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A6FBF20B24A39344002A21A6 /* EventDetailLauncher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailLauncher.swift; sourceTree = "<group>"; };
 		AC7B212124A28A660012D7A7 /* doIT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = doIT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC7B212424A28A660012D7A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC7B212624A28A660012D7A7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				AC7B212424A28A660012D7A7 /* AppDelegate.swift */,
+				A6FBF20B24A39344002A21A6 /* EventDetailLauncher.swift */,
 				AC7B212624A28A660012D7A7 /* SceneDelegate.swift */,
 				AC7B212824A28A660012D7A7 /* ViewController.swift */,
 				AC7B212A24A28A660012D7A7 /* Main.storyboard */,
@@ -141,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6FBF20C24A39344002A21A6 /* EventDetailLauncher.swift in Sources */,
 				AC7B212924A28A660012D7A7 /* ViewController.swift in Sources */,
 				AC7B212F24A28A660012D7A7 /* doIT.xcdatamodeld in Sources */,
 				AC7B212524A28A660012D7A7 /* AppDelegate.swift in Sources */,
