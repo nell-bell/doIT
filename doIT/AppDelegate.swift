@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,6 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        registerForPushNotifications()
         // Override point for customization after application launch.
         return true
     }
@@ -32,7 +34,54 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
+    
+    func registerForPushNotifications(){
+        UNUserNotificationCenter.current()
+            .requestAuthorization(options:[ .alert, .sound, .badge]){
+               [weak self] granted, error in
+                
+                print("Permission granted \(granted)")
+                guard granted else { return }
+                self?.getNotifationSetting()
+                }
+    }
+    
+    func getNotifationSetting(){
+        UNUserNotificationCenter.current().getNotificationSettings {settings in
+            print("Notification settings \(settings)")
+            
+            guard settings.authorizationStatus == .authorized else { return }
+            DispatchQueue.main.async {
+              UIApplication.shared.registerForRemoteNotifications()
+            }
+        }
+    }
+    
+    func applicationWillTerminate(_ application: UIApplication) {
 
+        let content = UNMutableNotificationContent()
+
+        //adding title, subtitle, body and badge
+        content.title = "Hey! Come back! Think about your grades"
+        content.subtitle = "your timer will be killed"
+        content.body = ""
+        content.badge = 1
+
+        //getting the notification trigger
+        //it will be called after 5 seconds
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+
+        //getting the notification request
+        let request = UNNotificationRequest(identifier: "SimplifiedIOSNotification", content: content, trigger: trigger)
+
+        //adding the notification to notification center
+        UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+
+        // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+    func applicationWillEnterForeground(_ application: UIApplication) {
+        // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
+    }
     // MARK: - Core Data stack
 
     lazy var persistentContainer: NSPersistentContainer = {
@@ -77,6 +126,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
+    func application(
+      _ application: UIApplication,
+      didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data
+    ) {
+      let tokenParts = deviceToken.map { data in String(format: "%02.2hhx", data) }
+      let token = tokenParts.joined()
+      print("Device Token: \(token)")
+    }
+
+    func application(
+      _ application: UIApplication,
+      didFailToRegisterForRemoteNotificationsWithError error: Error) {
+      print("Failed to register: \(error)")
+    }
 
 }
+
 
