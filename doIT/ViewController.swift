@@ -11,6 +11,9 @@ import UIKit
 class ViewController: UIViewController {
 
     class ViewController: UIViewController {
+       
+        @IBOutlet weak var WeekView: WeekView!
+        weekView.dataSource = self
         
         let eventDetailLauncher = EventDetailLauncher()
         lazy var weekView: WeekView = {
