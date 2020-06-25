@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6id-ha-oZ3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6id-ha-oZ3">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -69,16 +69,22 @@
                                 <rect key="frame" x="182" y="433" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="completedTapped:" destination="al7-Mi-MRm" eventType="touchUpInside" id="bn4-ka-Ac0"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="tLy-ol-waU"/>
                     </view>
                     <navigationItem key="navigationItem" id="1Gk-H1-5Kp"/>
+                    <connections>
+                        <outlet property="titleLabel" destination="Wuf-wz-4ix" id="uCt-hr-AYL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iUQ-28-WfJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5816" y="758"/>
+            <point key="canvasLocation" x="5815.9420289855079" y="757.36607142857144"/>
         </scene>
         <!--Add To Do View Controller-->
         <scene sceneID="ljm-F6-QHZ">
@@ -107,9 +113,12 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </switch>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Elq-YG-ryN">
-                                <rect key="frame" x="182" y="641" width="46" height="30"/>
+                                <rect key="frame" x="182" y="641" width="74" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="addedTapped:" destination="GeZ-D5-xAe" eventType="touchUpInside" id="xfS-d5-rPn"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JLT-cX-gDi">
                                 <rect key="frame" x="159" y="305" width="97" height="34"/>
@@ -122,6 +131,10 @@
                         <viewLayoutGuide key="safeArea" id="y8Q-C5-xpG"/>
                     </view>
                     <navigationItem key="navigationItem" id="bZa-fq-8eh"/>
+                    <connections>
+                        <outlet property="importantSwitch" destination="pJa-eS-ijP" id="FJK-yG-kXs"/>
+                        <outlet property="titleTextField" destination="JLT-cX-gDi" id="DBf-DW-04y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oeC-DP-xhj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -227,8 +240,8 @@
     </scenes>
     <resources>
         <image name="bg3" width="352" height="541"/>
-        <image name="house" catalog="system" width="128" height="110"/>
-        <image name="list.bullet" catalog="system" width="128" height="88"/>
+        <image name="house" catalog="system" width="64" height="54"/>
+        <image name="list.bullet" catalog="system" width="64" height="44"/>
         <image name="txt" width="242" height="105"/>
     </resources>
 </document>
