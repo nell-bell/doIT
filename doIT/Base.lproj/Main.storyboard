@@ -6,6 +6,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Lato-Regular.ttf">
+            <string>Lato-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -149,7 +154,7 @@
         <!--Animal Farm-->
         <scene sceneID="kcA-wk-eBA">
             <objects>
-                <viewController id="tEo-g4-heA" sceneMemberID="viewController">
+                <viewController id="tEo-g4-heA" customClass="AnimalFarm" customModule="doIT" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="18r-jx-5pc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -161,15 +166,51 @@
                                     <navigationItem title="DoIt" id="w5A-Ql-hlY"/>
                                 </items>
                             </navigationBar>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg3" translatesAutoresizingMaskIntoConstraints="NO" id="scb-8E-dsU">
+                                <rect key="frame" x="0.0" y="-65" width="551" height="977"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="txt" translatesAutoresizingMaskIntoConstraints="NO" id="VlE-OC-2KO">
+                                <rect key="frame" x="37" y="189" width="353" height="215"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3gb-O4-1bR">
+                                <rect key="frame" x="175" y="244" width="25" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="21"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OAU-ej-KTM">
+                                <rect key="frame" x="37" y="476" width="114" height="84"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fnB-Hm-k9T">
+                                <rect key="frame" x="280" y="432" width="51" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
+                                <state key="normal" title="START">
+                                    <color key="titleColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="start:" destination="tEo-g4-heA" eventType="touchUpInside" id="WcD-0m-KGG"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="GGe-8f-X6j"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Animal Farm" image="house" catalog="system" id="2Sv-Ko-ldw"/>
+                    <connections>
+                        <outlet property="bear" destination="OAU-ej-KTM" id="ZMD-jZ-MoQ"/>
+                        <outlet property="bg3" destination="scb-8E-dsU" id="OtR-MV-qwX"/>
+                        <outlet property="time" destination="3gb-O4-1bR" id="kXE-L2-m7C"/>
+                        <outlet property="txt" destination="VlE-OC-2KO" id="e1q-a8-5Zt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cbL-43-MfG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4225" y="728"/>
+            <point key="canvasLocation" x="4224.6376811594209" y="727.90178571428567"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Mxb-k8-4ks">
@@ -182,7 +223,6 @@
                     </tabBar>
                     <connections>
                         <segue destination="zQq-Mq-xdX" kind="relationship" relationship="viewControllers" id="h1y-c5-1wf"/>
-                        <segue destination="tEo-g4-heA" kind="relationship" relationship="viewControllers" id="MJC-AF-eaZ"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xnV-8f-Bal" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -210,7 +250,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="bg3" width="352" height="541"/>
         <image name="house" catalog="system" width="128" height="110"/>
         <image name="list.bullet" catalog="system" width="128" height="88"/>
+        <image name="txt" width="242" height="105"/>
     </resources>
 </document>
