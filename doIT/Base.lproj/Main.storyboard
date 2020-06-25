@@ -69,7 +69,7 @@
             </objects>
             <point key="canvasLocation" x="1131.8840579710145" y="-588.61607142857144"/>
         </scene>
-        <!--doIT-->
+        <!--To Do -->
         <scene sceneID="5rA-vK-usX">
             <objects>
                 <tableViewController id="usk-9m-Rby" sceneMemberID="viewController">
@@ -92,8 +92,8 @@
                             <outlet property="delegate" destination="usk-9m-Rby" id="xiS-ny-LyE"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="To Do List " id="GIt-lU-0mB"/>
-                    <navigationItem key="navigationItem" title="doIT" id="gPr-eG-Vp6"/>
+                    <tabBarItem key="tabBarItem" title="To Do List " image="list.bullet" catalog="system" id="GIt-lU-0mB"/>
+                    <navigationItem key="navigationItem" title="To Do " id="gPr-eG-Vp6"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HR6-sF-rtW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -117,15 +117,15 @@
             </objects>
             <point key="canvasLocation" x="205.79710144927537" y="94.419642857142847"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--doIT-->
         <scene sceneID="70N-Gq-JLk">
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="LJG-UP-dNG" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="IGe-7a-xPX">
+                    <navigationItem key="navigationItem" title="doIT" id="IGe-7a-xPX">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="AE0-87-0Yy">
                             <connections>
-                                <segue destination="FEr-AZ-uWu" kind="show" id="lV5-lR-jKD"/>
+                                <segue destination="FEr-AZ-uWu" kind="show" id="Erk-AJ-NGf"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -153,11 +153,15 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="7xL-5o-W26"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Animal Farm " id="H06-mN-DSO"/>
+                    <tabBarItem key="tabBarItem" title="Animal Farm " image="house" catalog="system" id="H06-mN-DSO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P7f-yD-YtH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1114" y="794"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="house" catalog="system" width="64" height="54"/>
+        <image name="list.bullet" catalog="system" width="64" height="44"/>
+    </resources>
 </document>
