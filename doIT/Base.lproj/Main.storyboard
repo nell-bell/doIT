@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6id-ha-oZ3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6id-ha-oZ3">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -14,6 +14,15 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2C3-H5-c9J">
+                                <rect key="frame" x="0.0" y="74" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="DoIt" id="WIx-A3-wSF"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
                         <color key="backgroundColor" red="0.8153099411722442" green="1" blue="0.97020580647435339" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -22,7 +31,7 @@
             </objects>
             <point key="canvasLocation" x="4225" y="-717"/>
         </scene>
-        <!--doIT-->
+        <!--DoIt-->
         <scene sceneID="s7Q-BX-N37">
             <objects>
                 <tableViewController id="Y6g-d5-8pe" customClass="ToDoTableViewController" customModule="doIT" customModuleProvider="target" sceneMemberID="viewController">
@@ -45,7 +54,7 @@
                             <outlet property="delegate" destination="Y6g-d5-8pe" id="OoJ-m4-Guw"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="doIT" id="VIu-Ip-4Lb">
+                    <navigationItem key="navigationItem" title="DoIt" id="VIu-Ip-4Lb">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="V2Z-rM-Xub">
                             <connections>
                                 <segue destination="GeZ-D5-xAe" kind="show" id="C1A-Cn-i84"/>
@@ -144,6 +153,15 @@
                     <view key="view" contentMode="scaleToFill" id="18r-jx-5pc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="08w-LX-ddu">
+                                <rect key="frame" x="0.0" y="62" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="DoIt" id="w5A-Ql-hlY"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="GGe-8f-X6j"/>
                     </view>
@@ -192,7 +210,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="house" catalog="system" width="64" height="54"/>
-        <image name="list.bullet" catalog="system" width="64" height="44"/>
+        <image name="house" catalog="system" width="128" height="110"/>
+        <image name="list.bullet" catalog="system" width="128" height="88"/>
     </resources>
 </document>
