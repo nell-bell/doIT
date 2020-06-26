@@ -32,4 +32,24 @@ class AnimalFarm
             timer.invalidate()
         }
     }
+     
+     func bearAppear()
+     {
+         if (minutes <= 20 && minutes > 10)
+         {
+             bear.image = UIImage(named: "bear3.jpg")
+         }
+         else if (minutes <= 10 && minutes > 1)
+         {
+             bear.image = UIImage(named: "bear2.jpg")
+         }
+         else if (minutes == 0)
+         {
+             bear.image = UIImage(named: "bear1.jpg")
+         }
+         else
+         {
+             
+         }
+     }
 }
