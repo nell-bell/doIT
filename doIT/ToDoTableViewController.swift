@@ -7,8 +7,22 @@
 //
 
 import UIKit
+import CoreData
 
 class ToDoTableViewController: UITableViewController {
+    
+    var toDos : [ToDoCD] = []
+    
+    func getToDos (){
+        if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
+            
+            if let coreDataToDos = try! context.fetch(ToDoCD.fetchRequest()) as? [ToDoCD] {
+                toDos = coreDataToDos
+                tableView.reloadData()
+            }
+            
+        }
+    }
 
     func createToDos() -> [ToDo] {
         let app = ToDo()
@@ -22,13 +36,16 @@ class ToDoTableViewController: UITableViewController {
         return [app, kwk]
     }
     
-    var toDos : [ToDo] = []
+   // var toDos : [ToDo] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        toDos = createToDos()
+       // toDos = createToDos()
     }
+    func viewWillAppear(_animated: Bool) {
+       getToDos()
+       }
 
     // MARK: - Table view data source
 /*
@@ -49,12 +66,13 @@ class ToDoTableViewController: UITableViewController {
         
         let toDo = toDos[indexPath.row]
         
+        if let name = toDo.name {
         if toDo.important {
-            cell.textLabel?.text = toDo.name + "!"
+            cell.textLabel?.text = name + "!"
         } else {
             cell.textLabel?.text = toDo.name
         }
-
+        } 
         return cell
     }
     
