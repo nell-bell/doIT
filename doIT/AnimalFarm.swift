@@ -20,6 +20,7 @@ class AnimalFarm
     
     @IBAction func start(_ sender: UIButton) {
         timer = Timer.scheduledTimer(timeInterval: 60, target: self, selector: #selector(AnimalFarm.counter), userInfo: nil, repeats: true)
+        bearAppear()
     }
     
     @objc func counter()

@@ -18,8 +18,8 @@
 		AC7B212F24A28A660012D7A7 /* doIT.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AC7B212D24A28A660012D7A7 /* doIT.xcdatamodeld */; };
 		AC7B213124A28A6C0012D7A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC7B213024A28A6C0012D7A7 /* Assets.xcassets */; };
 		AC7B213424A28A6C0012D7A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC7B213224A28A6C0012D7A7 /* LaunchScreen.storyboard */; };
-		AC9F286A24A4F9EB00FB7DF2 /* lato in Resources */ = {isa = PBXBuildFile; fileRef = AC9F286924A4F9EB00FB7DF2 /* lato */; };
 		AC9F286C24A4FB0400FB7DF2 /* AnimalFarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9F286B24A4FB0400FB7DF2 /* AnimalFarm.swift */; };
+		ACF09BAB24A62E5C00B49464 /* lato in Resources */ = {isa = PBXBuildFile; fileRef = ACF09BAA24A62E5C00B49464 /* lato */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,8 +36,8 @@
 		AC7B213024A28A6C0012D7A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC7B213324A28A6C0012D7A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC7B213524A28A6C0012D7A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AC9F286924A4F9EB00FB7DF2 /* lato */ = {isa = PBXFileReference; lastKnownFileType = folder; name = lato; path = ../../../../Downloads/lato; sourceTree = "<group>"; };
 		AC9F286B24A4FB0400FB7DF2 /* AnimalFarm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalFarm.swift; sourceTree = "<group>"; };
+		ACF09BAA24A62E5C00B49464 /* lato */ = {isa = PBXFileReference; lastKnownFileType = folder; name = lato; path = ../../../Downloads/lato; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +80,7 @@
 				815FB26724A4632700F3B69F /* AddToDoViewController.swift */,
 				815FB26924A4674000F3B69F /* CompleteToDoViewController.swift */,
 				AC7B213024A28A6C0012D7A7 /* Assets.xcassets */,
-				AC9F286924A4F9EB00FB7DF2 /* lato */,
+				ACF09BAA24A62E5C00B49464 /* lato */,
 				AC7B213224A28A6C0012D7A7 /* LaunchScreen.storyboard */,
 				AC7B213524A28A6C0012D7A7 /* Info.plist */,
 				AC7B212D24A28A660012D7A7 /* doIT.xcdatamodeld */,
@@ -146,7 +146,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC9F286A24A4F9EB00FB7DF2 /* lato in Resources */,
+				ACF09BAB24A62E5C00B49464 /* lato in Resources */,
 				AC7B213424A28A6C0012D7A7 /* LaunchScreen.storyboard in Resources */,
 				AC7B213124A28A6C0012D7A7 /* Assets.xcassets in Resources */,
 				AC7B212C24A28A660012D7A7 /* Main.storyboard in Resources */,
