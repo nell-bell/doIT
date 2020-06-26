@@ -38,12 +38,12 @@
                     <navigationItem key="navigationItem" title="doIT" id="42A-1H-206">
                         <barButtonItem key="leftBarButtonItem" title="Item" image="house" catalog="system" id="izU-8x-qfT">
                             <connections>
-                                <segue destination="tEo-g4-heA" kind="show" id="3ad-9Z-LFi"/>
+                                <segue destination="tEo-g4-heA" kind="show" id="6RQ-7A-RpW"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="0WV-WT-qob">
                             <connections>
-                                <segue destination="GeZ-D5-xAe" kind="show" id="ZYG-jH-Hsc"/>
+                                <segue destination="GeZ-D5-xAe" kind="show" id="9iT-4N-v7w"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
