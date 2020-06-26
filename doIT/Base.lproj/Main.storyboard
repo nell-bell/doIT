@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6id-ha-oZ3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zQq-Mq-xdX">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -12,7 +12,7 @@
         </array>
     </customFonts>
     <scenes>
-        <!--DoIt-->
+        <!--doIT-->
         <scene sceneID="s7Q-BX-N37">
             <objects>
                 <tableViewController id="Y6g-d5-8pe" customClass="ToDoTableViewController" customModule="doIT" customModuleProvider="target" sceneMemberID="viewController">
@@ -35,10 +35,15 @@
                             <outlet property="delegate" destination="Y6g-d5-8pe" id="OoJ-m4-Guw"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="DoIt" id="VIu-Ip-4Lb">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="V2Z-rM-Xub">
+                    <navigationItem key="navigationItem" title="doIT" id="42A-1H-206">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="house" catalog="system" id="izU-8x-qfT">
                             <connections>
-                                <segue destination="GeZ-D5-xAe" kind="show" id="C1A-Cn-i84"/>
+                                <segue destination="tEo-g4-heA" kind="show" id="3ad-9Z-LFi"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="0WV-WT-qob">
+                            <connections>
+                                <segue destination="GeZ-D5-xAe" kind="show" id="ZYG-jH-Hsc"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -59,22 +64,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wuf-wz-4ix">
-                                <rect key="frame" x="186" y="186" width="42" height="21"/>
+                                <rect key="frame" x="186" y="247" width="42" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7h9-GJ-73f">
-                                <rect key="frame" x="182" y="433" width="46" height="30"/>
+                                <rect key="frame" x="150" y="294" width="115" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Completed Task!"/>
                                 <connections>
                                     <action selector="completedTapped:" destination="al7-Mi-MRm" eventType="touchUpInside" id="bn4-ka-Ac0"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="0.92707925800000002" green="0.86052239340000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="tLy-ol-waU"/>
                     </view>
                     <navigationItem key="navigationItem" id="1Gk-H1-5Kp"/>
@@ -94,40 +99,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zdk-yM-VnE">
-                                <rect key="frame" x="186" y="163" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What do you need to do?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zdk-yM-VnE">
+                                <rect key="frame" x="73" y="182" width="269" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wDr-8K-z9W">
-                                <rect key="frame" x="186" y="463" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Is it important?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wDr-8K-z9W">
+                                <rect key="frame" x="118" y="376" width="178" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="pJa-eS-ijP">
-                                <rect key="frame" x="186" y="550" width="49" height="31"/>
+                                <rect key="frame" x="184" y="433" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </switch>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Elq-YG-ryN">
-                                <rect key="frame" x="182" y="641" width="74" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="addedTapped:" destination="GeZ-D5-xAe" eventType="touchUpInside" id="xfS-d5-rPn"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JLT-cX-gDi">
-                                <rect key="frame" x="159" y="305" width="97" height="34"/>
+                                <rect key="frame" x="149" y="220" width="117" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Elq-YG-ryN">
+                                <rect key="frame" x="170" y="472" width="74" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Add to List"/>
+                                <connections>
+                                    <action selector="addedTapped:" destination="GeZ-D5-xAe" eventType="touchUpInside" id="xfS-d5-rPn"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="0.77162805315954497" green="1" blue="0.89170705425697283" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="y8Q-C5-xpG"/>
                     </view>
                     <navigationItem key="navigationItem" id="bZa-fq-8eh"/>
@@ -205,6 +210,7 @@
                         <viewLayoutGuide key="safeArea" id="GGe-8f-X6j"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Animal Farm" image="house" catalog="system" id="2Sv-Ko-ldw"/>
+                    <navigationItem key="navigationItem" id="vca-7y-Gi7"/>
                     <connections>
                         <outlet property="bear" destination="OAU-ej-KTM" id="ZMD-jZ-MoQ"/>
                         <outlet property="bg3" destination="scb-8E-dsU" id="OtR-MV-qwX"/>
@@ -214,31 +220,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cbL-43-MfG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4192.753623188406" y="740.625"/>
+            <point key="canvasLocation" x="5006" y="734"/>
         </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="Mxb-k8-4ks">
-            <objects>
-                <tabBarController id="6id-ha-oZ3" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="FEc-UD-uHV">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="zQq-Mq-xdX" kind="relationship" relationship="viewControllers" id="h1y-c5-1wf"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xnV-8f-Bal" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4226" y="-5"/>
-        </scene>
-        <!--To Do List-->
+        <!--Navigation Controller-->
         <scene sceneID="Uob-fg-Eyx">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zQq-Mq-xdX" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="To Do List" image="list.bullet" catalog="system" id="6Xk-uG-PaP"/>
                     <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="G5Q-iC-7ai">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -259,8 +248,7 @@
         <image name="cow1" width="84" height="68"/>
         <image name="elephant1" width="101" height="61"/>
         <image name="fox1" width="509" height="351"/>
-        <image name="house" catalog="system" width="128" height="110"/>
-        <image name="list.bullet" catalog="system" width="128" height="88"/>
+        <image name="house" catalog="system" width="64" height="54"/>
         <image name="sheep1" width="455" height="326"/>
         <image name="transparent" width="466" height="349"/>
         <image name="txt" width="242" height="105"/>
