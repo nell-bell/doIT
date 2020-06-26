@@ -41,7 +41,7 @@ class ToDoTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-       // toDos = createToDos()
+    
     }
     func viewWillAppear(_animated: Bool) {
        getToDos()
@@ -129,13 +129,12 @@ class ToDoTableViewController: UITableViewController {
             addVC.previousVC = self
         }
         if let completeVC = segue.destination as? CompleteToDoViewController {
-            if let toDo = sender as? ToDo {
-                completeVC.selectedToDo = toDo
-                completeVC.previousVC = self
-            }
-        }
-        
+            
+            if let toDo = sender as? ToDoCD {
+            completeVC.selectedToDo = toDo
+            completeVC.previousVC = self
     }
-    
-
+}
+        
+}
 }

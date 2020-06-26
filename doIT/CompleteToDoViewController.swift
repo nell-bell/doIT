@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class CompleteToDoViewController: UIViewController {
     
@@ -23,9 +24,9 @@ class CompleteToDoViewController: UIViewController {
     
     @IBAction func completedTapped(_ sender: Any) {
         if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
-                   if let theToDo = selectedToDo {
-                       context.delete(theToDo)
-                       navigationController?.popViewController(animated: true)
+            if let theToDo = selectedToDo {
+                context.delete(theToDo)
+                navigationController?.popViewController(animated: true)
                    }
                }
         
