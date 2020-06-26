@@ -23,8 +23,25 @@ class AddToDoViewController: UIViewController {
     }
 
     @IBAction func addedTapped(_ sender: Any) {
+        if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
+            
+            let toDo = ToDoCD(entity: ToDoCD.entity(), insertInto: context)
+            
+            if let titleText = titleTextField.text {
+                    // we will take the titleText and assign that value to toDo.name
+                    // this .name and .important came from the attributes you typed in on the Core Data page!
+                    toDo.name = titleText
+                    toDo.important = importantSwitch.isOn
         
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+                }
+                
+                try? context.save()
+                
+                navigationController?.popViewController(animated: true)
+            }
+    }
+
+        /* guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
          return
         }
         let context = appDelegate.persistentContainer.viewContext
@@ -34,7 +51,7 @@ class AddToDoViewController: UIViewController {
         appDelegate.saveContext()
         navigationController?.popViewController(animated: true)
         
-      /*  let toDo = ToDo()
+        let toDo = ToDo()
         
         if let titleText = titleTextField.text{
         toDo.name = titleText
@@ -43,8 +60,8 @@ class AddToDoViewController: UIViewController {
     previousVC.toDos.append(toDo)
     previousVC.tableView.reloadData()
     navigationController?.popViewController(animated: true)
-        
        */
+       
     }
 
     /*
@@ -57,4 +74,4 @@ class AddToDoViewController: UIViewController {
     }
     */
 
-}
+

@@ -48,7 +48,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="al7-Mi-MRm" kind="show" id="SSE-EP-6Lg"/>
+                        <segue destination="al7-Mi-MRm" kind="show" identifier="moveToComplete" id="SSE-EP-6Lg"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IgH-hB-Vnb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
