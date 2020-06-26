@@ -25,7 +25,7 @@ class AnimalFarm : UIViewController
     var timer = Timer()
     
     @IBAction func start(_ sender: UIButton) {
-        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(AnimalFarm.counter), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(AnimalFarm.counter), userInfo: nil, repeats: true)
     }
     
     @objc func counter()
