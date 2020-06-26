@@ -25,14 +25,15 @@ class AnimalFarm : UIViewController
     var timer = Timer()
     
     @IBAction func start(_ sender: UIButton) {
-        timer = Timer.scheduledTimer(timeInterval: 60, target: self, selector: #selector(AnimalFarm.counter), userInfo: nil, repeats: true)
-        bearAppear()
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(AnimalFarm.counter), userInfo: nil, repeats: true)
     }
     
     @objc func counter()
     {
         minutes -= 1
         time.text = String(minutes)
+        
+        bearAppear()
         
         if (minutes == 0)
         {
