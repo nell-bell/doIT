@@ -8,12 +8,18 @@
 
 import UIKit
 
-class AnimalFarm
+class AnimalFarm : UIViewController
 {
     @IBOutlet weak var bg3: UIImageView!
     @IBOutlet weak var txt: UIImageView!
     @IBOutlet weak var time: UILabel!
     @IBOutlet weak var bear: UIImageView!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+        time.transform = CGAffineTransform(rotationAngle: CGFloat.pi / -7.21)
+    }
     
     var minutes = 30
     var timer = Timer()
